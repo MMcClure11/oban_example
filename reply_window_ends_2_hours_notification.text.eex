@@ -1,0 +1,11 @@
+<%= gettext("Hi %{user_name},", user_name: @user.first_name) %>
+
+<%= gettext("You’ve been assigned to help send texts for %{org_name}’s job, “%{job_name}”. You can only reply to responses from recipients for another 2 hours before the job becomes inactive at %{end_time}.", org_name: @organization.name, job_name: @job.name, end_time: @end_time) %>
+
+<%= @url %>
+
+<%= gettext("Looking for tips and tricks or a little refresher on how to text? Read our Texting 101 article.") %>
+
+<%#= "TODO: add link for read our texting 101" %>
+
+<%= gettext("Have questions? You can email us at support@TextingTool.com or visit our help desk.") %>

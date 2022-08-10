@@ -1,0 +1,27 @@
+<%= content_tag(:p, gettext("Hi %{user_name},", user_name: @user.first_name)) %>
+
+<%= content_tag(:p,
+	[
+		gettext("You’ve been assigned to help send texts for %{org_name}’s job, “%{job_name}”, ", org_name: @organization.name, job_name: @job.name),
+		content_tag(:span, gettext("which starts in 2 hours at %{job_start_time}.", job_start_time: @time), style: "font-weight: 700;")
+	]) %>
+
+<%= content_tag(:p, gettext("Once the job starts, you can start texting with the texting tool. Find the job in your list of assignments.")) %>
+
+<%= content_tag(:div, content_tag(:a, gettext("Open Texting Tool"), href: @url, class: "button", style: TextingToolWeb.LayoutView.email_style(:button))) %>
+
+<%= content_tag(:p,
+  [
+    gettext("Looking for tips and tricks or a little refresher on how to text? Read our "),
+    content_tag(:a, gettext("Texting 101 article"), href: "TODO: link Zendesk", style: TextingToolWeb.LayoutView.email_style(:link)),
+    gettext(".")
+  ]) %>
+
+<%= content_tag(:p,
+  [
+    gettext("Have questions? You can email us at "),
+    content_tag(:a, gettext("support@TextingTool.com"), href: "mailto:support@TextingTool.com", style: TextingToolWeb.LayoutView.email_style(:link)),
+    gettext(" or visit our "),
+    content_tag(:a, gettext("help desk"), href: "TODO: link Zendesk", style: TextingToolWeb.LayoutView.email_style(:link)),
+    gettext(".")
+  ]) %>

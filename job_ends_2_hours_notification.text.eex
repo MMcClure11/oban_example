@@ -1,0 +1,15 @@
+<%= gettext("Hi %{user_name},", user_name: @user.first_name) %>
+
+<%= gettext("You’ve been assigned to help send texts for %{org_name}’s job, “%{job_name}”, which ends in 2 hours at %{job_end_time}.", org_name: @organization.name, job_name: @job.name, job_end_time: @end_time) %>
+
+<%= if @can_reply? do %>
+	<%=  gettext("After the job ends, you can reply to any responses from recipients for 72 hours during this job’s texting hours (%{job_start_time} - %{job_end_time}).", job_start_time: @start_time, job_end_time: @end_time) %>
+<% end %>
+
+<%= @url %>
+
+<%= gettext("Looking for tips and tricks or a little refresher on how to text? Read our Texting 101 article.") %>
+
+<%#= "TODO: add link for read our texting 101" %>
+
+<%= gettext("Have questions? You can email us at support@TextingTool.com or visit our help desk.") %>

@@ -1,0 +1,13 @@
+<%= gettext("Hi %{user_name},", user_name: @user.first_name) %>
+
+<%= gettext("You’ve been assigned to help send texts for %{org_name}’s job, “%{job_name}”, which starts in 2 hours at %{job_start_time}.", org_name: @organization.name, job_name: @job.name, job_start_time: @time) %>
+
+<%=  gettext("Once the job starts, you can start texting with the texting tool. Find the job in your list of assignments.") %>
+
+<%= @url %>
+
+<%= gettext("Looking for tips and tricks or a little refresher on how to text? Read our Texting 101 article.") %>
+
+<%#= "TODO: add link for read our texting 101" %>
+
+<%= gettext("Have questions? You can email us at support@TextingTool.com or visit our help desk.") %>
